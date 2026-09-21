@@ -2,6 +2,10 @@
 
 A browser-based football management game where you take control of Corinthians for the final 10 rounds of Brasileirão 2026 and fight to avoid relegation.
 
+## Play now
+
+**Live game:** https://salveocorinthians-two.vercel.app/
+
 ## About the game
 
 The career starts after Round 28 of Brasileirão 2026. The first 28 rounds are treated as the real-world historical base, while Rounds 29–38 become the player's alternate timeline.
