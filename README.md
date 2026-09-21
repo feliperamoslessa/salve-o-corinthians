@@ -1,34 +1,55 @@
-# Salve o Corinthians — V13 RC
+# Salve o Corinthians — V13
 
-Release candidate local-first do jogo de sobrevivência no Brasileirão 2026.
+A browser-based football management game where you take control of Corinthians for the final 10 rounds of Brasileirão 2026 and fight to avoid relegation.
 
-## Teste antes do deploy
+## Play now
 
-Abra a pasta com um servidor local (por exemplo `python -m http.server 8000`) e teste o fluxo completo: pré-jogo → 1º tempo → intervalo → substituições → 2º tempo → fim → resultados → próxima rodada → R38 → Hall.
+**Live game:** https://salveocorinthians-two.vercel.app/
 
-## Áudio
+## About the game
 
-Coloque os MP3 em `assets/audio/` com os nomes definidos no projeto. A interface do jogador não expõe detalhes internos de arquivos.
+The career starts after Round 28 of Brasileirão 2026. The first 28 rounds form the historical starting point, while Rounds 29–38 become the player's alternate timeline.
 
-## Release candidate
+You manage Corinthians through the final stretch of the championship, making tactical decisions, choosing formations, managing the squad and playing matches while the other league fixtures are simulated simultaneously.
 
-Esta versão congela novas funcionalidades para priorizar testes, balanceamento e correções antes do deploy público.
+## Main features
 
+- Final 10 rounds of Brasileirão 2026
+- Minute-by-minute Corinthians matches
+- Simultaneous simulation of the other league matches
+- Live table and relegation battle
+- 13 tactical formations
+- Squad, stamina and morale management
+- Match events, scorers and assists
+- Career saves and Hall of Fame
+- Deterministic match simulation
+- Desktop and mobile support
+- Local-first browser saves
 
-## V13 — ajuste de gols
-- Frequência de criação de chances aumentada.
-- Conversão recalibrada para partidas mais movimentadas.
-- Jogos paralelos usam a mesma filosofia de maior volume ofensivo.
-- Mantida a ponderação de artilheiros por posição, reduzindo gols excessivos de zagueiros.
-- Resultado continua determinístico pela seed: recarregar não rerrola a partida.
+## Run locally
 
+No build step is required.
 
-## V13 — calibração ofensiva
-- Frequência de ataques perigosos aumentada.
-- Conversão de chances aumentada para produzir partidas e rodadas com mais gols.
-- A mesma calibração é aplicada aos nove jogos paralelos.
-- A seleção ponderada de artilheiros por posição permanece ativa.
+Start a local server from the project directory:
 
+```bash
+python -m http.server 8000
+```
 
-## V13 scoring
-High-scoring calibration requested after V11 remained too conservative. Target is intentionally around 4.8–5.4 goals per match over large samples, with deterministic RNG and late-match attacking boosts.
+Then open `http://localhost:8000` in your browser.
+
+## Deployment
+
+The project is a static HTML/CSS/JavaScript application and can be deployed directly to Vercel.
+
+## Version
+
+Current public build: **V13**.
+
+## Disclaimer
+
+This is an independent fan-made project. It is not an official product of Sport Club Corinthians Paulista, CBF, Brasileirão, Konami, EA Sports, or any other football organization or publisher.
+
+## Author
+
+Made by [@felipelessa03](https://github.com/feliperamoslessa).
